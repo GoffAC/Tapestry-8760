@@ -1,0 +1,233 @@
+
+/* Project Meta */
+
+/* reset  */
+
+/* general */
+
+/* typography */
+
+/* grid */
+
+/* header */
+
+/* footer */
+
+/* Page template A */
+
+.header {
+  width: 100%;
+  top: 0;
+  background-color: white;
+}
+
+.pot {
+  margin: 8px;
+  border: 1px lightgrey solid;
+  border-radius: 80px;
+  width: 90%;
+  background-color: white;
+}
+
+.pot--bar .pot-content {
+  padding: 10px;
+  display: flex;
+}
+
+.pot-content {
+  border-radius: 80px;
+}
+
+.pot-content .datePicker {
+  width: 150px;
+}
+
+.pot__title {
+  padding: 8px;
+  margin:-1px;
+  display: inline;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.pot__task {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  padding: 8px;
+  margin-right: 8px;
+  background-color: white;
+  width: 75px;
+  display: inline-block;
+  position: relative;
+}
+
+.pot__space {
+  padding: 8px;
+  flex-grow: 1;
+  height: 100px;
+ }
+
+.pot-container {
+  display: grid;
+  margin-bottom: 120px;
+  padding: 8px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.pot__space--bar {
+  margin: auto;
+  width:100%;
+  text-align: center;
+}
+
+.progress-bar {
+  display: flex;
+}
+
+.progress-bar__block {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+
+.progress-bar__block-text {
+  text-align: center;
+  font-size: 0.75em;
+  min-width: 10px;
+}
+
+.timeline {
+  width:calc(100% - 40px);
+  position: fixed;
+  bottom:0;
+  padding:20px;
+  background-color: #fff;
+  border-top: solid;
+}
+
+.timeline-label {  
+  display: flex;
+}
+
+.timeline__label-12am {  
+  width:8.333%;
+  text-align: left;
+}
+
+.timeline__label-4am {  
+  width:16.666%;
+  text-align: center;
+}
+
+.timeline__label-8am {  
+  width:16.666%;
+  text-align: center;
+}
+
+.timeline__label-12pm {  
+  width:16.666%;
+  text-align: center;
+}
+
+.timeline__label-4pm {  
+  width:16.666%;
+  text-align: center;
+}
+
+.timeline__label-8pm {  
+  width:16.666%;
+  text-align: center;
+}
+
+.timeline__label-12eve {
+  width:8.333%;
+  text-align: right;
+}
+
+.striped-border {
+  width: 100%;
+  border: none;
+  background: repeating-linear-gradient( 
+            90deg,
+            #000,
+            #000 0.362%,
+            #fff 0.362%,
+            #fff 3.986%,
+            #000 3.986%,
+            #000 4.348%,
+            #fff 4.348%,
+            #fff 7.971%,
+            #000 7.971%,
+            #000 8.333%,
+            #fff 8.333%,
+            #fff 11.957%,
+            #000 11.957%,
+            #000 12.319%,
+            #fff 12.319%,
+            #fff 15.942%,
+            #000 15.942%,
+            #000 16.667%);
+            height: 8px;
+            width: 100%;
+}
+
+/* Page template B */
+
+/* Media Queries */
+/*mobile*/
+@media (max-width: 600px) {
+
+  .header {
+    position: fixed;
+  }
+
+  .pot-container {
+    margin-top: 80px;
+    display: grid;
+    padding: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .pot {
+    margin: 8px;
+    border: 1px lightgrey solid;
+    border-radius: 80px;
+    width: 100px;
+    height: 75px;
+    background-color: white;
+  }
+
+  .dayOfYear{
+    font-size: .5em;
+    padding: 2px;
+  }
+
+  .pot__task {
+    padding: 3px 12px;
+    display: inline-block;
+  }
+
+  .pot__title {
+    display: none;
+  }
+
+  .pot-content {
+    height: 100%;
+    border-radius: 80px;
+  }
+
+  .timeline {
+    bottom:0px;
+    padding:20px;
+    background-color: #fff;
+    border-top: solid;
+  }
+
+  .dayOfYear {
+    text-align: center;
+    width: 100%;
+  }
+
+}
