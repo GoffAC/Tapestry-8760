@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@atlaskit/css-reset": "^4.0.0",
+    "browserify-sign": "^4.0.4",
     "dotenv": "^8.2.0",
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.2",
