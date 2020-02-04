@@ -116,7 +116,7 @@ class App extends React.Component {
                                 const column = this.state.columns[columnId];
                                 const tasks = column.taskIds.map(taskId => this.state.tasks[taskId])
 
-                                if (columnId === "column-1") { return; }
+                                if (columnId === "column-1") { return null; }
                                 return <Column key={column.id} column={column} tasks={tasks} colour={this.state.columns[columnId].colour} image={this.state.columns[columnId].image}/>;
                             })
                             }

@@ -23,8 +23,8 @@ export default class ProgressBar extends React.Component {
 
     const isLeapYear = function() {
       var year = dateObject.getFullYear();
-      if((year & 3) != 0) return false;
-      return ((year % 100) != 0 || (year % 400) == 0);
+      if((year & 3) !== 0) return false;
+      return ((year % 100) !== 0 || (year % 400) === 0);
     };
 
     const getDOY = function() {
