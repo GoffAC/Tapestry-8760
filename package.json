@@ -6,6 +6,7 @@
     "@atlaskit/css-reset": "^4.0.0",
     "ajv": "^6.11.0",
     "browserify-sign": "^4.0.4",
+    "des.js": "^1.0.1",
     "dotenv": "^8.2.0",
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.2",
