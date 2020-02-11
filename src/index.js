@@ -18,7 +18,7 @@ class App extends React.Component {
     getDataFromAPI() {
         const options = { 
             method: 'GET',
-            url: process.env.REACT_APP_SHEETY_API_URL+"pots",
+            url: process.env.REACT_APP_SHEETY_API_URL+"/pots",
             headers: {
             Authorization: process.env.REACT_APP_SHEETY_AUTH,
            'Content-Type': 'application/json' 
