@@ -64,7 +64,7 @@ export default class ProgressBar extends React.Component {
 
     var options = { 
       method: 'PUT',
-      url: process.env.REACT_APP_SHEETY_API_URL+"records/"+targetLineInDB,
+      url: process.env.REACT_APP_SHEETY_API_URL+"/records/"+targetLineInDB,
       headers: {
       Authorization: process.env.REACT_APP_SHEETY_AUTH,
      'Content-Type': 'application/json' 
