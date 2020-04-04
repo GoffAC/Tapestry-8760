@@ -83,7 +83,7 @@ export default class ProgressBar extends React.Component {
     })
   };
 
-  spottedResetDayClick() {
+  spottedResetDayClick = () => {
     //get the records
     let newState = {...this.state};
     newState.records=[];
