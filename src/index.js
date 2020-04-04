@@ -7,6 +7,7 @@ import rp from "request-promise";
 
 import ProgressBar from './ProgressBar';
 import Column from './Column.jsx';
+import ResetButton from './ResetButton.jsx';
 
 
 class App extends React.Component {
@@ -110,6 +111,7 @@ class App extends React.Component {
                 <DragDropContext onDragStart={this.onDragStart} onDragEnd={this.onDragEnd}>
                     <div className='header'>
                         <Column className="bar" key={this.state.columns['column-1']} column={this.state.columns['column-1']} tasks={this.state.columns['column-1'].taskIds.map(taskId => this.state.tasks[taskId])} />
+                        <ResetButton/>
                     </div>
                         <div className='pot-container'>
                             {this.state.columnOrder.map(columnId => {

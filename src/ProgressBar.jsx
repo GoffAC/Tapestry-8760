@@ -10,14 +10,17 @@ export default class ProgressBar extends React.Component {
 
   componentDidMount() {
     document.addEventListener("dropped", this.spottedDrop);
+    window.addEventListener("resetDayClicked", this.spottedResetDayClick);
 
+    //add the date to state so that we may increment it after submitting a day
     var dateInUI = document.querySelector('input[type="date"]');
     const newState = { ...this.state };
     newState.date = dateInUI.value;
     this.setState(newState);
   };
 
-  getDbRowFromDate() {
+  findDbRowFromDate() {
+    //pick up the date
     var dateInUI = document.querySelector('input[type="date"]');
     const dateObject = new Date(dateInUI.value);
 
@@ -59,7 +62,7 @@ export default class ProgressBar extends React.Component {
   }
 
   postDataToAPI(records) {
-    const targetLineInDB = this.getDbRowFromDate();
+    const targetLineInDB = this.findDbRowFromDate();
     const payload = this.convertRecordsIntoSchema(records)
 
     var options = { 
@@ -78,6 +81,15 @@ export default class ProgressBar extends React.Component {
     rp(options, function (error, response, body) {
       if (error) throw new Error(error);
     })
+  };
+
+  spottedResetDayClick() {
+    //get the records
+    let newState = {...this.state};
+    newState.records=[];
+    newState.total=0;
+    console.log(newState)
+    this.setState(newState);
   };
 
   spottedDrop = event => {

@@ -19,6 +19,14 @@
   width: 100%;
   top: 0;
   background-color: white;
+  display: flex;
+}
+
+.resetButton {
+  width: 100px;
+  border-radius: 10px;
+  margin: 16px;
+  padding: 5px;
 }
 
 .pot {
